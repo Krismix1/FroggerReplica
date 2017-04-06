@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Frog : MonoBehaviour 
 {
@@ -30,7 +31,8 @@ public class Frog : MonoBehaviour
     {
         if(collision.CompareTag("Car"))
         {
-            rb2D.MovePosition(new Vector2(0f, -4f));
+            Score.CurrentScore = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

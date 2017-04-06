@@ -2,11 +2,9 @@
 
 public class CarSpawner : MonoBehaviour 
 {
-    public GameObject carPrefab;
+    public GameObject[] carPrefabs;
     public float spawnDelay = 2f;
     public Transform[] spawnPositions;
-
-    float spawnTimer = 0f;
 
     private void Start()
     {
@@ -17,6 +15,8 @@ public class CarSpawner : MonoBehaviour
     {
         int index = Random.Range(0, spawnPositions.Length);
         Transform spawnPoint = spawnPositions[index];
+        int spriteIndex = Random.Range(0, carPrefabs.Length);
+        GameObject carPrefab = carPrefabs[spriteIndex];
         Instantiate(carPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }
