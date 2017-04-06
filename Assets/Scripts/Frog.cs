@@ -25,4 +25,12 @@ public class Frog : MonoBehaviour
             rb2D.MovePosition(rb2D.position + Vector2.right);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Car"))
+        {
+            rb2D.MovePosition(new Vector2(0f, -4f));
+        }
+    }
 }
