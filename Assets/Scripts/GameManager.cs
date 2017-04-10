@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
-    public Text highScoreText;
 
     private void Update()
     {
@@ -12,12 +11,6 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
-    }
-
-    public void ResetScore()
-    {
-        PlayerPrefs.DeleteKey("HighScore");
-        highScoreText.text = "0";
     }
 
     public void NewGame()

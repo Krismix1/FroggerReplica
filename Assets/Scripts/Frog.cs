@@ -31,7 +31,7 @@ public class Frog : MonoBehaviour
     {
         if(collision.CompareTag("Car"))
         {
-            SceneManager.LoadScene("ScoreScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

@@ -3,3 +3,4 @@ Temp/
 *.sln
 .vs/
 *.csproj
+Builds/
